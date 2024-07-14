@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="javaScript Exam.">
+  <title>javaScript Exam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="bg-black">
+
+  <header class="overflow-auto">
+    <nav>
+      <ul class="nav d-flex flex-column nav-lists justify-content-between  bg-black position-fixed z-3 h-100 ps-0 p-4">
+        <div>
+          <li class="nav-item">
+            <a class="nav-link text-white position-relative" aria-current="page" href="index.html"
+              id="search">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white position-relative" href="index.html" id="category">Categories</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white position-relative" href="index.html" id="area">Area</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white position-relative" href="index.html" id="ingredient">Ingredients</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white position-relative" href="index.html" id="contact">Contact Us</a>
+          </li>
+        </div>
+        <div class="px-3 w-100">
+          <i class="fa-brands fa-facebook text-white"></i>
+          <i class="fa-brands fa-twitter text-white"></i>
+          <i class="fa-solid fa-globe text-white"></i>
+          <div class="text-white">Copyright Â© 2019 All Rights<br>
+            Reserved.</div>
+        </div>
+      </ul>
+    </nav>
+    <div
+      class="d-flex flex-column justify-content-between align-items-center py-4 px-2 bg-white position-fixed z-3 logo-header h-100">
+      <div class="logo">
+        <img src="images/logo.png" class="w-100" alt="logo" />
+      </div>
+      <div class="close-icon">
+        <i class="fa-solid fa-align-justify fa-2x"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-globe d-block"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <div class="loader-screen d-flex justify-content-center align-items-center w-100 vh-100">
+        <i class="fa-solid fa-spinner fa-spin fa-6x text-white"></i>
+      </div>
+      <div class="row my-5 d-none g-4" id="row">
+
+      </div>
+      <div class="data-product d-none mb-5" id="data-product">
+
+      </div>
+      <div class="search d-none my-5" id='search-section'>
+        <div class="container">
+          <div class="d-flex">
+            <form class="row g-3 w-100 mx-auto needs-validation" novalidate>
+              <div class="col-6">
+                <label for="search-by-word" hidden class="form-label">City</label>
+                <input type="text" class="form-control bg-black text-white " placeholder="Search by Name"
+                  id="search-by-word" required>
+              </div>
+              <div class="col-6">
+                <label for="search-by-first-letter" hidden class="form-label">City</label>
+                <input type="text" class="form-control bg-black text-white" maxlength="1"
+                  placeholder="Search by First Letter" id="search-by-first-letter" required>
+              </div>
+            </form>
+          </div>
+          <div class="row my-5 d g-4" id="display-search"></div>
+        </div>
+      </div>
+      <div class="my-5" id="category-section">
+        <div class="container">
+          <div class="row g-4 d-none" id="category-section-data">
+          </div>
+        </div>
+      </div>
+      <div class="my-5">
+        <div class="container">
+          <div class="row g-4 d-none" id="area-section">
+          </div>
+        </div>
+      </div>
+      <div class="my-5">
+        <div class="container">
+          <div class="row g-4 d-none" id="ingredient-section">
+          </div>
+        </div>
+      </div>
+      <div class="my-5">
+        <div class="container py-5 d-none w-75" id="contact-section">
+          <form class="row g-4 my-5">
+            <div class="col-6">
+              <label for="inputName" hidden class="form-label">Name</label>
+              <input type="text" autocomplete="name" class="form-control" id="inputName" placeholder="Enter Your Name">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Special characters and numbers not allowed
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail" hidden class="form-label">Email</label>
+              <input type="email" autocomplete="email" class="form-control" id="inputEmail"
+                placeholder="Enter Your Email">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Email not valid *exemple@yyy.zzz
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPhone" hidden class="form-label">Phone</label>
+              <input type="text" class="form-control" id="inputPhone" placeholder="Enter Your Phone">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Enter valid Phone Number
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputAge" hidden class="form-label">Age</label>
+              <input type="number" class="form-control" id="inputAge" placeholder="Age">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Enter valid age
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword" hidden class="form-label">Password</label>
+              <input type="password" class="form-control" autocomplete="new-password" id="inputPassword"
+                placeholder="Enter Your Password">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Enter valid password *Minimum eight characters, at least one letter and one number:*
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRePassword" hidden class="form-label">RePassword</label>
+              <input type="password" class="form-control" autocomplete="new-password" id="inputRePassword"
+                placeholder="Repassword">
+              <div class="alert text-center d-none alert-danger" role="alert">
+                Enter valid repasswor<br/>
+                Password and Repassword Not eqaul
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="d-block mx-auto my-3 btn btn-outline-danger" disabled
+                id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+
+</html>
