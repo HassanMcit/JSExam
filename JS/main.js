@@ -44,6 +44,7 @@ searchFirstLetter.addEventListener('blur', function (e) {
 });
 
 function openNav() {
+    $(".logo-header").css(`opacity`,`1`);
     $(".close-icon i").removeClass("fa-align-justify");
     $(".close-icon i").addClass("fa-x");
     $('.nav-lists').animate({ 'left': '0' });
@@ -52,6 +53,7 @@ function openNav() {
 }
 
 function closeNav() {
+    $(".logo-header").css(`opacity`,`0.3`);
     $(".close-icon i").addClass("fa-align-justify");
     $(".close-icon i").removeClass("fa-x");
     $('.nav-lists').animate({ 'left': -$('.nav-lists').outerWidth() });
@@ -84,7 +86,7 @@ function diplayData(data, location) {
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card xxxx w-100 position-relative cursor-pointer bg-black overflow-hidden" onClick="searchCatergory('${meal.strCategory}')">
                             <img src="${meal.strCategoryThumb}" class="w-100 card-img-top" alt="${meal.idCategory}" />
-                            <div class="card-body position-absolute w-100 fs-3 cursor-pointer bg-white bg-opacity-75 h-100 top-100 d-flex flex-column align-items-center">
+                            <div class="card-body position-absolute text-center w-100 fs-3 cursor-pointer bg-white bg-opacity-75 h-100 top-100 d-flex flex-column align-items-center">
                             ${meal.strCategory}
                             <p class="fs-5 text-center">
                             ${meal.strCategory} ${meal.strCategoryDescription.split(" ").slice(1, 11).join(" ")}</p>
@@ -104,7 +106,7 @@ function diplayData(data, location) {
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card xxxx w-100 position-relative overflow-hidden" cursor-pointer onClick="displayDataProduct('${meal.idMeal}')">
                     <img src="${meal.strMealThumb}" class="w-100 card-img-top" alt="${meal.strMeal}" />
-                    <div class="card-body position-absolute w-100 fs-3 bg-white bg-opacity-75 cursor-pointer h-100 top-100 d-flex align-items-center">
+                    <div class="card-body position-absolute w-100 text-center bg-danger fs-3 bg-white bg-opacity-75 cursor-pointer h-100 top-100 d-flex align-items-center">
                     ${meal.strMeal}
                     </div>
                 </div>
@@ -279,7 +281,7 @@ function displayIngredient(data) {
     data.map(e => {
         box += `
             <div class="col-12 col-md-6 col-lg-3 cursor-pointer">
-                <div class="card xxxx w-100 position-relative bg-black text-center text-white overflow-hidden" cursor-pointer onClick="searchIngredient('${e.strIngredient}')">
+                <div class="card xxxx w-100 position-relative text-center bg-black text-center text-white overflow-hidden" cursor-pointer onClick="searchIngredient('${e.strIngredient}')">
                 <p><i class="fa-solid fa-drumstick-bite fa-5x"></i></p>    
                 <h2>${e.strIngredient}</h2>
                 <p>${e.strDescription.split(" ").splice(0, 15).join(" ")}</p>
@@ -301,7 +303,7 @@ function displayArea(data) {
     data.map(e => {
         box += `
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card xxxx w-100 position-relative bg-black text-center text-white overflow-hidden" cursor-pointer onClick="searchArea('${e.strArea}')">
+                <div class="card xxxx w-100 position-relative text-center bg-black text-center text-white overflow-hidden" cursor-pointer onClick="searchArea('${e.strArea}')">
                 <p><i class="fa-solid fa-house-laptop fa-5x"></i></p>    
                 <h2>${e.strArea}</h2>
                 </div>
