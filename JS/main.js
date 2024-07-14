@@ -368,6 +368,7 @@ document.getElementById('inputRePassword').addEventListener('input', function (e
         e.target.classList.add('is-invalid');
         e.target.classList.remove('is-valid');
         e.target.nextElementSibling.classList.remove('d-none');
+        submitBtn.setAttribute('disabled', 1);
     }
 
 });
