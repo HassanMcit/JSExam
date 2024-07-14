@@ -17,6 +17,8 @@ const submitBtn = document.getElementById('submit');
 let dataRecived, mainData = undefined;
 let currentDisplay;
 
+$(".logo-header").css(`opacity`,`0.3`);
+
 $(function () {
     $('.loader-screen').addClass('d-none');
     $('.row').removeClass('d-none');
