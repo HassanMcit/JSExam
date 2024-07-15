@@ -20,7 +20,6 @@ let currentDisplay;
 $(".logo-header").css(`opacity`,`0.3`);
 
 $(function () {
-    $('.loader-screen').addClass('d-none');
     $('.row').removeClass('d-none');
 });
 
@@ -75,6 +74,7 @@ async function getDataFromAPI(dataAPI, location) {
         console.log(dataRecived.meals);
         diplayData(dataRecived.meals, location);
     }
+    $('.loader-screen').addClass('d-none');
 }
 
 function diplayData(data, location) {
@@ -177,8 +177,11 @@ async function displayDataProduct(id) {
                         ${recipesBox}
                     </div>
                     <h3 class="mt-3 mb-4">Tage: </h3>
-                    <a href="${x.strSource}" target="_blank" class="btn btn-success">Source</a>
-                    <a href="${x.strYoutube}" target="_blank" class="btn btn-danger ms-2">YouTube</a>
+
+                    <div>
+                        <a href="${x.strSource}" target="_blank" class="btn btn-success">Source</a>
+                        <a href="${x.strYoutube}" target="_blank" class="btn btn-danger ms-2">YouTube</a>
+                    </div>
                 </div>
             </div>
         </div>
