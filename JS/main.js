@@ -74,10 +74,10 @@ async function getDataFromAPI(dataAPI, location) {
         console.log(dataRecived.meals);
         diplayData(dataRecived.meals, location);
     }
-    $('.loader-screen').addClass('d-none');
 }
 
 function diplayData(data, location) {
+    $('.loader-screen').addClass('d-none');
     document.getElementById('area-section').classList.add('d-none');
     document.getElementById('ingredient-section').classList.add('d-none');
     currentDisplay = location;
