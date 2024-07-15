@@ -108,7 +108,7 @@ function diplayData(data, location) {
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card xxxx w-100 position-relative overflow-hidden" cursor-pointer onClick="displayDataProduct('${meal.idMeal}')">
                     <img src="${meal.strMealThumb}" class="w-100 card-img-top" alt="${meal.strMeal}" />
-                    <div class="card-body position-absolute w-100 text-center bg-danger fs-3 bg-white bg-opacity-75 cursor-pointer h-100 top-100 d-flex align-items-center">
+                    <div class="card-body position-absolute w-100 justify-content-center bg-danger fs-3 bg-white bg-opacity-75 cursor-pointer h-100 top-100 d-flex align-items-center">
                     ${meal.strMeal}
                     </div>
                 </div>
